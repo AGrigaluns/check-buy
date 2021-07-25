@@ -1,0 +1,14 @@
+body {
+    background: #000000;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.logoImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px 10px;
+}
