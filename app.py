@@ -37,7 +37,8 @@ def about():
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == "POST":
-       user = request.form['name']
+       user = request.form['email']
+       user = request.form['password']
        session['user'] = user
        return redirect(url_for('user'))
     else:

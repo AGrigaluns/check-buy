@@ -12,3 +12,13 @@ body {
     height: 40px;
     border-radius: 10px 10px;
 }
+
+.card {
+    margin: 50px 0 30px;
+    color: #ffffff;
+}
+
+form {
+    margin: 200px auto 0;
+    border-radius: 10px 10px;
+}
