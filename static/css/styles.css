@@ -53,5 +53,6 @@ form {
 }
 
 .newsTitle {
-    margin-top: -50px;
+    margin-top: -100px;
+    padding: 10px;
 }
