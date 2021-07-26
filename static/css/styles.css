@@ -51,3 +51,7 @@ form {
 .contactImg {
     width: 30px;
 }
+
+.newsTitle {
+    margin-top: -50px;
+}
