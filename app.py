@@ -4,19 +4,33 @@
 
 from flask import Flask, render_template, url_for, redirect, request, session, flash
 import MySQLdb
+from flask_login import UserMixin
 
 ufile = open('data/user.txt', 'r')
 user = ufile.read()[:-1]
 ufile.close()
 
 pfile = open('data/password.txt', 'r')
-password = pfile.read()[:-1]
+db_password = pfile.read()[:-1]
 pfile.close()
-
-db = MySQLdb.connect("localhost", user, password, "checkbuy")
 
 app = Flask(__name__)
 app.secret_key = 'hello'
+
+
+# =============================================================> Database user class
+# class Note(db.Model):
+    # id = db.Column(db.Integer, primary_key=True)
+    # data = db.Column(db.String(1000))
+    # date = db.Column(db.DateTime(timezone=True), default=func.now())
+
+
+
+# class User(db.Model, UserMixin):
+    # id = db.Column(db.Integer, primary_key=True)
+    # email = db.Column(db.String(150), unique=True)
+    # password = db.Column(db.String(150))
+    # name = db.Column(db.String(150))
 
 
 # =============================================================> Navigation
@@ -45,6 +59,11 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/cart')
+def cart():
+    return render_template('cart.html')
+
+
 # =============================================================> Registration, login, logout, user profile
 # ===========================> Handling user login
 @app.route('/login', methods=['POST', 'GET'])
@@ -69,6 +88,7 @@ def logout():
 # ============================> Handle registration
 @app.route('/register', methods=['POST', 'GET'])
 def register():
+    '''
     if request.method == "POST":
         email = request.form.get('email')
         name = request.form.get('name')
@@ -85,7 +105,8 @@ def register():
             flash('Your password is too short!', category='error')
         else:
             flash('Great! You are successfully registered!', category='success')
-        return render_template('register.html')
+            '''
+    return render_template('register.html')
 
 
 # ===========================> Profile page for user data

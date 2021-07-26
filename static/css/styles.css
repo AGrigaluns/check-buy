@@ -1,5 +1,5 @@
 body {
-    background: #000000;
+    background: #ffffff;
 }
 
 .nav-link:hover {
@@ -16,9 +16,33 @@ body {
 .card {
     margin: 50px 0 30px;
     color: #ffffff;
+    border-radius: 0 0;
+    padding: 10px;
 }
 
 form {
     margin: 200px auto 0;
     border-radius: 10px 10px;
+}
+
+.btn {
+    border-radius: 0 0;
+}
+
+.carousel .carousel-item {
+  height: 300px;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top: -100px;
+    left: 0;
+    height: 300px;
+}
+
+.cart {
+    width: 40px;
+    border-radius: 20px 20px;
+    margin-left: 100px;
 }
