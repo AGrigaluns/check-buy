@@ -6,14 +6,6 @@ from flask import Flask, render_template, url_for, redirect, request, session, f
 import MySQLdb
 from flask_login import UserMixin
 
-ufile = open('data/user.txt', 'r')
-user = ufile.read()[:-1]
-ufile.close()
-
-pfile = open('data/password.txt', 'r')
-db_password = pfile.read()[:-1]
-pfile.close()
-
 app = Flask(__name__)
 app.secret_key = 'hello'
 
