@@ -60,6 +60,7 @@ def cart():
 # ===========================> Handling user login
 @app.route('/login', methods=['POST', 'GET'])
 def login():
+    '''
     if request.method == "POST":
        user = request.form['email']
        session['user'] = user
@@ -67,7 +68,8 @@ def login():
     else:
         if 'user' in session:
             return redirect(url_for('user'))
-        return render_template('login.html')
+    '''
+    return render_template('login.html')
 
 
 # ===========================> Handle user logout
